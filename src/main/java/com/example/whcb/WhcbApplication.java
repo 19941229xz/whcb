@@ -50,7 +50,7 @@ public class WhcbApplication {
     }
 
 public void test(){
-
+    System.out.println(1231);
 }
 
 
