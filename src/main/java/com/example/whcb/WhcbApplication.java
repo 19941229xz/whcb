@@ -49,6 +49,10 @@ public class WhcbApplication {
 
     }
 
+public void test(){
+
+}
+
 
     @ExceptionHandler(value = Exception.class)
     @ResponseBody
