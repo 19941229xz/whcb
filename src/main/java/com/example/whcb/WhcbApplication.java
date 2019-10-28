@@ -68,5 +68,8 @@ public class WhcbApplication {
 
     }
 
+    public void test2(){
+        System.out.println("sdfasfasdf");
+    }
 
 }
