@@ -45,7 +45,7 @@ public class WhcbApplication {
 
 //        System.out.println(appInfo);
 
-
+        System.out.println("我改了代码");
 
     }
 
