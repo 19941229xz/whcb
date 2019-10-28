@@ -19,9 +19,6 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.lang.model.element.ElementVisitor;
 
-/**
- * 1231231412312312
- */
 @RestController
 @RequestMapping("test")
 @Slf4j
@@ -42,17 +39,8 @@ public class WhcbApplication {
 
 
 //        System.out.println(appInfo);
-
-        System.out.println("我改了代码");
-        //asdfaf
-        //asdfa/
-        //       /asdf/asdf/
+        
     }
-
-public void test(){
-    System.out.println(1231);
-}
-
 
     @ExceptionHandler(value = Exception.class)
     @ResponseBody
@@ -70,10 +58,6 @@ public void test(){
         }
 
 
-    }
-
-    public void test2(){
-        System.out.println("sdfasfasdf");
     }
 
 }
