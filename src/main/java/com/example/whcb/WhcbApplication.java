@@ -49,6 +49,10 @@ public class WhcbApplication {
         //       /asdf/asdf/
     }
 
+public void test(){
+    System.out.println(1231);
+}
+
 
     @ExceptionHandler(value = Exception.class)
     @ResponseBody
