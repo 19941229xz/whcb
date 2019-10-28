@@ -27,7 +27,7 @@ import javax.lang.model.element.ElementVisitor;
 @Slf4j
 @SpringBootApplication(scanBasePackages = "com.example")
 @ControllerAdvice
-@MapperScan({"com.example.whcb.dao","com.example.task"})
+@MapperScan({"com.example.whcb.dao", "com.example.task"})
 @EnableCaching
 //@EnableScheduling
 public class WhcbApplication {
@@ -38,15 +38,15 @@ public class WhcbApplication {
     public static void main(String[] args) {
 
 
-
         SpringApplication.run(WhcbApplication.class, args);
-
 
 
 //        System.out.println(appInfo);
 
-
-
+        System.out.println("我改了代码");
+        //asdfaf
+        //asdfa/
+        //       /asdf/asdf/
     }
 
 public void test(){
@@ -56,26 +56,21 @@ public void test(){
 
     @ExceptionHandler(value = Exception.class)
     @ResponseBody
-    public Object handleException(Exception e){
+    public Object handleException(Exception e) {
         e.printStackTrace();
-        if(e instanceof MyException){
+        if (e instanceof MyException) {
             return BaseResponse.fail(new MyException(HttpCode.ERROR));
-        }else if(e instanceof MethodArgumentNotValidException){
-            MethodArgumentNotValidException ex=(MethodArgumentNotValidException)e;
+        } else if (e instanceof MethodArgumentNotValidException) {
+            MethodArgumentNotValidException ex = (MethodArgumentNotValidException) e;
             return BaseResponse.fail(new MyException(HttpCode.BAD_PARAM).msg(
-                    "参数校验错误，错误原因："+ex.getBindingResult().getFieldError().getDefaultMessage()
+                    "参数校验错误，错误原因：" + ex.getBindingResult().getFieldError().getDefaultMessage()
             ));
-        }else{
+        } else {
             return BaseResponse.fail(new MyException(HttpCode.ERROR));
         }
 
 
-
     }
-
-
-
-
 
 
 }
